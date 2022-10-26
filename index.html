@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="./styles/style.css" rel ="stylesheet">
   <link href="./styles/modals.css" rel ="stylesheet">
+  <link href="./styles/configuration.css" rel ="stylesheet">
 </head>
 <body>
   <div id="backdrop"></div>
@@ -18,10 +19,10 @@
     <p>Built with HTML, CSS, JavaScript and lots of love!</p>
   </header>
   <main>
-    <aside class="modal">
+    <aside class="modal" id="config-modal">
       <h2>Choose your name</h2>
       <form>
-        <div>
+        <div class="form-control">
           <label for=""playername>Player Name</label>
           <input type="text" name="username" id="playername" />
         </div>

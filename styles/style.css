@@ -1,7 +1,7 @@
 
 :root {
-  --primary: rgb(35, 41, 70);
-  --highlight: rgb(238, 187, 195);
+  --primary: #232946;
+  --highlight: #eebbc3;
   --main-text: #232946;
   --light-font:#fffffe;
   --base: rgb(212, 216, 240);

@@ -4,12 +4,13 @@
   left: 5%;
   width: 90%;
   padding: 1rem;
-  background-color: var(--highlight);
-  border: 4px solid var(--primary);
+  /* background: linear-gradient(145deg, #ffc8d1, #d6a8b0); */
+  border: 0.5px solid var(--primary);
   border-radius: 6px;
-  box-shadow: 0 6px 15px rgba(238, 187, 195, 0.3);
-  
-
+  background: linear-gradient(145deg, #ffcdd5, #cc959d);
+  box-shadow:  23px 23px 46px #232946a5,
+             -23px -23px 46px #40466bc1;
+             z-index: 10; 
 }
 
 #backdrop {
@@ -19,6 +20,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(35, 41, 70, 0.8);
+  z-index: 1;
 }
 
 @media (min-width: 48rem) {

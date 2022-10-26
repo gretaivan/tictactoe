@@ -1,0 +1,36 @@
+#config-modal {
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+#config-modal h2 {
+  margin: 0.5rem 0;
+
+}
+
+.form-control {
+  margin: 0.5rem 0;
+  padding: 0.5rem 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  
+
+}
+
+.form-control input {
+  font: inherit;
+  border: 1px solid var(--primary);
+  width: 15rem;
+  padding: 0.35rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  border-radius: 3px;
+  background: #ffffff;
+  box-shadow: inset -3px 3px 5px #e3e3e3,
+              inset 3px -3px 5px #e3e3e3;
+  color: inherit
+}
