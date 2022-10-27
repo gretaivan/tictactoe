@@ -9,8 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="./styles/style.css" rel ="stylesheet">
-  <link href="./styles/modals.css" rel ="stylesheet">
   <link href="./styles/configuration.css" rel ="stylesheet">
+  <link href="./styles/game.css" rel ="stylesheet">
+  <link href="./styles/modals.css" rel ="stylesheet">
 </head>
 <body>
   <div id="backdrop"></div>
@@ -24,7 +25,7 @@
       <form>
         <div class="form-control">
           <label for=""playername>Player Name</label>
-          <input type="text" name="username" id="playername" />
+          <input type="text" name="username" id="playername" autocomplete="off" />
         </div>
         <div>
           <button type="button" class="btn btn-alt">Cancel</button>
@@ -38,7 +39,7 @@
           <article>
             <h2>Player 1</h2>
             <h3>PLAYER NAME</h3>
-            <p>X</p>
+            <p class="player-symbol">X</p>
             <button class="btn btn-alt">Edit</button>
           </article>
         </li>
@@ -46,7 +47,7 @@
           <article>
             <h2>Player 2</h2>
             <h3>PLAYER NAME</h3>
-            <p>O</p>
+            <p class="player-symbol">O</p>
             <button class="btn btn-alt">Edit</button>
           </article>
         </li>
@@ -54,8 +55,8 @@
       <button class="btn">Start New Game</button>
     </section>
     <section id="active-game">
-      <article>
-        <h3>You won, <span id="winner-name">PlAYER NAME</span>!</h3>
+      <article id="game-over">
+        <h3>You won, <span id="winner-name">PLAYER NAME</span>!</h3>
         <p>Click "Start New Game" above, to start a new game! </p>
       </article>
       <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>

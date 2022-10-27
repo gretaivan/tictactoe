@@ -9,8 +9,12 @@
   border-radius: 6px;
   background: linear-gradient(145deg, #ffcdd5, #cc959d);
   box-shadow:  23px 23px 46px #232946a5,
-             -23px -23px 46px #40466bc1;
+             -23px -23px 46px rgba(64, 70, 107, 0.757);
              z-index: 10; 
+  display: none;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 10;
 }
 
 #backdrop {
@@ -20,7 +24,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(35, 41, 70, 0.8);
-  z-index: 1;
+  z-index: 10;
+  display: none;
 }
 
 @media (min-width: 48rem) {
