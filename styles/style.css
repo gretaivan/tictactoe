@@ -17,15 +17,15 @@ body {
 
 header {
   background: linear-gradient(90deg, var(--primary), #2d3355);
-  padding: 2rem 5%;
+  padding: 1rem 5%;
   text-align: center;
   color: var(--light-font);
 
   /* border-bottom-left-radius: 20px; */
   /* border-bottom-right-radius: 90px; */
 
-box-shadow:  -1px -1px 20px #1e233c,
-             1px 1px 20px #282f51;  
+/* box-shadow:  -1px -1px 20px #1e233c,
+             1px 1px 20px #282f51;   */
 }
 
 header p { color: #b8c1ec; }
