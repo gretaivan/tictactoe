@@ -35,7 +35,6 @@
   border: 1px solid var(--primary);
   width: 15rem;
   padding: 0.35rem;
-  margin-bottom: 0.5rem;
   text-align: center;
   border-radius: 3px;
   background: #ffffff;
@@ -43,7 +42,6 @@
               inset 3px -3px 5px #e3e3e3;
   color: inherit; 
   height: 2rem;
-  /* padding: 0 1rem; */
   border-radius: 0.5rem;
   background: var(--base);
   border: 0;
@@ -55,8 +53,8 @@
   outline-color: var(--base);
 }
 
-#game-config, #game-config ol, #game-config ol > * {
-  z-index: -1;
+.form-control input:hover {
+  border: 2px solid var(--highlight);
 }
 
 #game-config {
@@ -82,7 +80,6 @@
   box-shadow: 0px 56px 65px 20px rgba(64, 70, 107, 0.3); 
   box-shadow:  13px 13px 26px rgba(184, 193, 236, 0.),
   -13px -13px 26px rgba(64, 70, 107, 0.3);
-  z-index: 10; 
 }
 
 #game-config h2 {
@@ -103,4 +100,14 @@
   margin: 0.5rem 0;
   color: var(--highlight);
   text-shadow: 2px 3px var(--primary);
+}
+
+.error input {
+  border-color: rgb(136,2 ,2); 
+  color: rgb(136,2 ,2); 
+  background-color: rgb(219, 144, 144);
+}
+
+.error label {
+  color: rgb(136,2 ,2); 
 }
