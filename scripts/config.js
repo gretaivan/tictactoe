@@ -6,11 +6,12 @@ function openPlayerConfig (e) {
   playerConfigModal.style.display = 'block';
 }
 
-function cancelConfigModal () {
+function closeConfigModal () {
   backdrop.style.display = 'none';
   playerConfigModal.style.display = 'none';
   formElement.firstElementChild.classList.remove('error');
   playerFormError.textContent = '';
+  formElement.firstElementChild.lastElementChild.value = '';
 }
 
 function savePlayerConfig(e) {
@@ -25,6 +26,11 @@ function savePlayerConfig(e) {
     return;
   }
 
+  const updatePlayerDataElement = document.getElementById('player-' + editedPlayer + '-data');
+  updatePlayerDataElement.children[1].textContent = enteredPlayerName;
 
-  
+  players[editedPlayer - 1].name = enteredPlayerName;
+
+  closeConfigModal();
+
 }
