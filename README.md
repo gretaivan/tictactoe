@@ -14,3 +14,4 @@
 
 - get icons or emojis from an API and parse that into the selectable grid
 - allow user to select their custom symbols
+- WebSocket

@@ -1,7 +1,7 @@
 #active-game {
   color: var(--light-font);
   text-align: center;
-  display: none;
+  /* display: none; */
 
 }
 
