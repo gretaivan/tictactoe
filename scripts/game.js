@@ -17,8 +17,21 @@ function switchPlayer() {
   activePlayerField.innerText = players[activePlayer].name;
 }
 
+function checkWinner(tile) {
+  console.log(tile);
+}
+
 function selectTile(e) {
+
+  console.log("active player: "  + activePlayer) 
+
+  if(gameData[e.target.dataset.row - 1][e.target.dataset.col - 1] !== 0)  return;
+
   e.target.textContent = players[activePlayer].symbol;
   e.target.classList.add('disabled');
+
+  gameData[e.target.dataset.row - 1][e.target.dataset.col - 1] = activePlayer + 1;
+  console.table(gameData);
+  checkWinner(e.target);
   switchPlayer();
 }
