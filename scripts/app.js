@@ -19,7 +19,7 @@ const cancelConfigModalBtn = document.getElementById("cancel-modal-btn");
 const formElement = document.querySelector('form');
 const playerFormError = document.getElementById('config-errors');
 const startError = document.getElementById("start-error");
-
+const activePlayerField = document.getElementById("active-player-name");
 
 const editPlayerOneBtn = document.getElementById("edit-player-1");
 const editPlayerTwoBtn = document.getElementById("edit-player-2");
