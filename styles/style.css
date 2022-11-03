@@ -57,3 +57,8 @@ header p { color: #b8c1ec; }
   background-color: transparent;
 }
 
+
+.error {
+  color: rgb(180, 12, 12); 
+}
+

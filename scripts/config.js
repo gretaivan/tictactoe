@@ -4,6 +4,7 @@ function openPlayerConfig (e) {
 
   backdrop.style.display = 'block';
   playerConfigModal.style.display = 'block';
+  startError.innerText = '';
 }
 
 function closeConfigModal () {
