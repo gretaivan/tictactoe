@@ -17,10 +17,6 @@ function switchPlayer() {
   activePlayerField.innerText = players[activePlayer].name;
 }
 
-function checkWinner(tile) {
-  console.log(tile);
-}
-
 function selectTile(e) {
 
   console.log("active player: "  + activePlayer) 
@@ -32,6 +28,58 @@ function selectTile(e) {
 
   gameData[e.target.dataset.row - 1][e.target.dataset.col - 1] = activePlayer + 1;
   console.table(gameData);
-  checkWinner(e.target);
+
+  let winner = checkForWinner();
+  
+  currentRound++; 
   switchPlayer();
+}
+
+function checkForWinner() {
+  //check rows
+  for(let i = 0; i < gameData.length; i++){
+    if (
+      gameData[i][0] > 0 && 
+      gameData[i][0] === gameData[i][1] && 
+      gameData[i][1] === gameData[i][2]
+    ) {
+      return gameData[i][0]; 
+    }
+  }
+
+  // check columns
+  for(let i = 0; i < gameData.length; i++){
+    if (
+      gameData[0][i] > 0 && 
+      gameData[0][i] === gameData[1][i] && 
+      gameData[1][i] === gameData[2][i]
+    ) {
+      return gameData[0][i]; 
+    }
+  }
+
+  //check top left to bottom right
+  if(
+    gameData[0][0] > 0 &&
+    gameData[0][0] === gameData[1][1] && 
+    gameData[1][1] === gameData[2][2]
+  ) {
+    return gameData[0][0]
+  }
+
+   //check top right to bottom left
+  if(
+    gameData[0][2] > 0 &&
+    gameData[0][2] === gameData[1][1] && 
+    gameData[1][1] === gameData[2][0]
+  ) {
+    return gameData[0][2]
+  }
+
+  //return draw
+  if(currentRound == 9){
+    return -1;
+  }
+
+  return 0;
 }
