@@ -13,14 +13,14 @@
 
 #game-over {
   max-width: 40rem;
-  margin: auto;
-  padding: 1rem 2rem;
+  margin: 1rem auto 1.5rem;
+  padding: 1rem 0.5rem 1.5rem;
   background-color: var(--highlight);
   border-radius: 10px;
   box-shadow:  13px 13px 26px #414a76a5,
              -13px -13px 26px rgba(64, 70, 107, 0.757);
              z-index: 10; 
-  display: none;
+  /* display: none; */
   
 }
 
@@ -28,6 +28,9 @@
   font-size: 3rem;
   color: var(--primary);
   margin: 0.5rem 0;
+}
+#game-over p {
+  font-size: inherit;
 }
 
 #active-player-name {
