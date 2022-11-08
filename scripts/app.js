@@ -31,6 +31,7 @@ const editPlayerOneBtn = document.getElementById("edit-player-1");
 const editPlayerTwoBtn = document.getElementById("edit-player-2");
 const startGameBtn = document.getElementById("start-game-btn");
 const gameFieldElements = document.querySelectorAll("#game-board li");
+const gameOverElement = document.getElementById('game-over');
 
 
 editPlayerOneBtn.addEventListener("click", openPlayerConfig);

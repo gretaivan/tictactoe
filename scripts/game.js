@@ -27,9 +27,12 @@ function selectTile(e) {
   e.target.classList.add('disabled');
 
   gameData[e.target.dataset.row - 1][e.target.dataset.col - 1] = activePlayer + 1;
-  console.table(gameData);
 
-  let winner = checkForWinner();
+  let winnerId = checkForWinner();
+
+  if (winnerId !== 0) {
+    endGame(winnerId); 
+  }
   
   currentRound++; 
   switchPlayer();
@@ -77,9 +80,21 @@ function checkForWinner() {
   }
 
   //return draw
-  if(currentRound == 9){
+  if(currentRound === 9){
     return -1;
   }
 
   return 0;
+}
+
+function endGame(winnerId) {
+  gameOverElement.style.display = 'block';
+
+  if(winnerId > 0) {
+    gameOverElement.firstElementChild.firstElementChild.textContent = players[winnerId - 1].name;
+  } else {
+    gameOverElement.firstElementChild.textContent = "It's a draw!"; 
+  }
+  
+
 }
