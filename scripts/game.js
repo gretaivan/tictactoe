@@ -1,8 +1,32 @@
+function resetGame() {
+  gameOver = false; 
+  activePlayer = 0; 
+  currentRound = 1; 
+  gameOverElement.firstElementChild.innerHTML = 'You won, <span id="winner-name"> PLAYER NAME</span>!';
+  gameOverElement.style.display = 'none';
+
+
+  let gameBoardTile = 0;
+
+  for(let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      gameData[i][j] = 0;
+      console.log(gameFieldElements)
+      gameFieldElements[gameBoardTile].innerHTML = '';
+      gameFieldElements[gameBoardTile].classList.remove('disabled');
+      gameBoardTile++; 
+    }
+  }
+  activePlayerField.parentElement.style.display = 'block';
+}
+
 function startNewGame() {
   if(players[0].name === '' || players[1].name === '') {
     startError.innerText = "Please set custom player names for both players to start the game!";
     return; 
   }
+
+  resetGame(); 
   activePlayerField.innerText = players[activePlayer].name;
   document.getElementById("active-game").style.display ="block";
 
@@ -21,7 +45,7 @@ function selectTile(e) {
 
   console.log("active player: "  + activePlayer) 
 
-  if(gameData[e.target.dataset.row - 1][e.target.dataset.col - 1] !== 0)  return;
+  if(gameData[e.target.dataset.row - 1][e.target.dataset.col - 1] !== 0 || gameOver === true)  return;
 
   e.target.textContent = players[activePlayer].symbol;
   e.target.classList.add('disabled');
@@ -33,7 +57,7 @@ function selectTile(e) {
   if (winnerId !== 0) {
     endGame(winnerId); 
   }
-  
+
   currentRound++; 
   switchPlayer();
 }
@@ -88,6 +112,8 @@ function checkForWinner() {
 }
 
 function endGame(winnerId) {
+  gameOver = true;
+  activePlayerField.parentElement.style.display = 'none';
   gameOverElement.style.display = 'block';
 
   if(winnerId > 0) {

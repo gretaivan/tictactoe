@@ -1,7 +1,7 @@
 #active-game {
   color: var(--light-font);
   text-align: center;
-  /* display: none; */
+  display: none;
 
 }
 
@@ -20,8 +20,7 @@
   box-shadow:  13px 13px 26px #414a76a5,
              -13px -13px 26px rgba(64, 70, 107, 0.757);
              z-index: 10; 
-  /* display: none; */
-  
+  display: none;
 }
 
 #game-over h2 {
